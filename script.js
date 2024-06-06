@@ -7,16 +7,22 @@ const Gameboard = (() => {
             boardHTML += `<div class="square" id="${index}">${square}</div>`
         })
         document.querySelector("#gameboard").innerHTML = boardHTML;
+
+        const squares = document.querySelectorAll(".square");
+        squares.forEach((square) => 
+            square.addEventListener('click', Game.handleClick));
         
     }
 
     const update = (index, value) => {
-        gameboard[index] = 
+        gameboard[index] = value;
+        render();
     }
     
 
     return {
         render,
+        update,
     }
 
 })();
@@ -45,13 +51,14 @@ const Game = (() =>{
 
     const squares = document.querySelectorAll(".square");
     squares.forEach((square) => 
-        square.addEventListener('click', handleClick));
+        square.addEventListener('click', Game.handleClick));
         
     }
 
     const handleClick = (e) => {
        const index = parseInt(e.target.id);
-       Game.update(index,players[currentPlayerIndex].mark)
+       Gameboard.update(index, players[currentPlayerIndex].mark);
+       currentPlayerIndex = currentPlayerIndex === 0 ? 1 : 0;
     }
 
     return {
