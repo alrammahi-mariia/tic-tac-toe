@@ -1,9 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: rgb(29, 42, 50);
+    color: rgb(32, 49, 59);
+}
+
 #gameboard {
+    height: 600px;
+    max-width: 600px;
+    gap: 10px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    height: 600px;
     justify-content: center;
   
 }
@@ -11,7 +23,9 @@
 .square {
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid black;
+    border: 1px solid rgb(29, 42, 50);
+    box-shadow: rgb(21, 33, 41) 20px;
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,21 +33,44 @@
     height: 25%;
     text-align: center;
     font-size: 80px;
+    color:rgb(98, 193, 189);
+    background-color: rgb(36,53,63);
 }
 
-#controls,#message {
+#controls, #message {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 5px;
     padding: 10px;
 }
 
 input {
-    padding: 5px;
-    width: 200px;
+    padding: 10px;
+    width: 250px;
+    background-color: rgb(172 190 200);
+    border: 1px solid rgb(29, 42, 50);
+    border-radius: 5px;
 }
 
 button {
     padding: 5px;
     width: 100px;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(29, 42, 50);
+    width: 150px;
+}
+
+#start-button {
+    background-color: rgb(98, 193, 189);
+
+
+}
+
+#restart-button {
+    background-color: rgb(243, 174, 82);
+
 }
