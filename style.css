@@ -34,7 +34,7 @@ body {
     color: rgb(98, 193, 189);
 }
 
-#overlay{
+/* #overlay{
   visibility: hidden;
   position: fixed;
   top: 0;
@@ -58,6 +58,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+} */
+
+#message {
+    color: rgb(243, 174, 82);
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
 }
 
 input {
