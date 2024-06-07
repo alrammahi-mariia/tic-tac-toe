@@ -9,20 +9,25 @@
 </head>
 
 <body>
-    <!-- <h1>Tic Tac Toe</h1> -->
+    <div id="overlay">
+        <div class="modal">
+            <div id="message">Player 1 is a winner!</div>
+            <div id="result-display"></div>
+        </div>
+    </div>
     <div id="gameboard"></div>
+
     <div id="controls">
         <div>
             <input type="text" id="player1" placeholder="Player 1 Name">
             <input type="text" id="player2" placeholder="Player 2 Name">
         </div>
         <div>
-            <button id="start-button">Start</button>
+            <button id="start-button">Start game</button>
             <button id="restart-button">Restart</button>
         </div>
     </div>
-    <div id="message"></div>
-    <div id="result-display"></div>
+
     <script src="script.js"></script>
 </body>
 </html>

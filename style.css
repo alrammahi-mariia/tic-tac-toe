@@ -10,47 +10,61 @@ body {
 }
 
 #gameboard {
-    height: 600px;
-    max-width: 600px;
-    gap: 10px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-  
+    height: 600px;
+    width: 600px;
+    gap: 10px;
+    margin: auto;
 }
 
 .square {
-    display: flex;
-    flex-wrap: wrap;
     border: 1px solid rgb(29, 42, 50);
-    box-shadow: rgb(21, 33, 41) 20px;
+    box-shadow: 10px 20px rgb( 21, 33, 41);
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 25%;
     height: 25%;
-    text-align: center;
     font-size: 80px;
-    color:rgb(98, 193, 189);
-    background-color: rgb(36,53,63);
+    background-color: rgba(36, 53, 63, 0.871);
+    color: rgb(98, 193, 189);
 }
 
-#controls, #message {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+#overlay{
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.177);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
     padding: 10px;
+    width: 100%;
+    height: 25%;
+    background-color: rgb(36,53,63);
+    color:rgb(98, 193, 189);
+    font-size: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 input {
-    padding: 10px;
+    padding: 15px;
     width: 250px;
     background-color: rgb(172 190 200);
-    border: 1px solid rgb(29, 42, 50);
+    border: none;
     border-radius: 5px;
 }
 
@@ -60,17 +74,31 @@ button {
     border: none;
     padding: 15px;
     border-radius: 5px;
-    border: 1px solid rgb(29, 42, 50);
     width: 150px;
+    color: rgb(32, 49, 59);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+
 }
 
 #start-button {
-    background-color: rgb(98, 193, 189);
+    background-color: rgb(243, 174, 82);
+    box-shadow: 5px 5px rgb(147, 104, 48);
 
 
 }
 
 #restart-button {
-    background-color: rgb(243, 174, 82);
+    background-color: rgb(98, 193, 189);
+    box-shadow: 5px 5px rgb(72, 141, 138);
 
 }
